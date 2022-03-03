@@ -230,36 +230,36 @@ body {
 
 /* 캐릭터 설병박스 */
 .cd {
-    height: 0px;
-    /* .cat 오버시 250px로 높이값 변경! */
-    overflow-y: scroll;
-    /* y축 스크롤만 생겨서 넘치는 자식요소 보이기 */
-    /*background: 색이반고윙/크;*/
-    background: url(../images/eachBG.jpg) no-repeat center/cover;
-    margin-top: 15px;
+  height: 0px;
+  /* .cat 오버시 250px로 높이값 변경! */
+  overflow-y: scroll;
+  /* y축 스크롤만 생겨서 넘치는 자식요소 보이기 */
+  /*background: 색이반고윙/크;*/
+  background: url(../images/eachBG.jpg) no-repeat center/cover;
+  margin-top: 15px;
 }
 
 /* .cat에 오버시 높이값 변경! */
-.cat:hover .cd{
-    height: 250px;
+.cat:hover .cd {
+  height: 250px;
 }
 
 /* 캐릭터 설명 타이틀 */
 .cd h3 {
-  font-family: 'Song Myung', serif;
-      font-size: 23px;
-      font-weight: normal;
-      padding: 5px 10px 0;
+  font-family: "Song Myung", serif;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 5px 10px 0;
   /* 패딩: 위 양쪽 아래 */
 }
 /* 캐릭터 설명문단 */
-.cd p{
-    font-family: "Nanum Myeongjo", serif;
-    font-size: 17px;
-    line-height: 1.7;
-    padding: 10px;
-    text-align: justify;
-    /* 양쪽정렬 */
+.cd p {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 17px;
+  line-height: 1.7;
+  padding: 10px;
+  text-align: justify;
+  /* 양쪽정렬 */
 }
 /********** 3. 하단영역 **********/
 .info {
