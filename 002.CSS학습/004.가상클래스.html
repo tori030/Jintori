@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>004.가상클래스</title>
     <style>
-        /*         
+      /*         
         [ 가상클래스란? ]
         - Pseudo-class 슈도클래스 라고도함
         - 의미: 마치 클래스를 준것 처럼
@@ -71,121 +70,161 @@
 
     */
 
+      h1,
+      h2 {
+        text-align: center;
+      }
 
-        h1,
-        h2 {
-            text-align: center;
-        }
+      /* a요소 가상클래스 주기 */
 
-        /* a요소 가상클래스 주기 */
-
-        /* :link 링크최초상태 */
-        /* h2 a:link{
+      /* :link 링크최초상태 */
+      /* h2 a:link{
             color: red;
             text-decoration: none;
         } */
 
-        /* 일반적으로 a요소 자체 디자인을 잡는다! */
-        h2 a {
-            color: hotpink;
-            text-decoration: none;
-            text-shadow: 2px 2px 2px #777;
-        }
-        
+      /* 일반적으로 a요소 자체 디자인을 잡는다! */
+      h2 a {
+        color: hotpink;
+        text-decoration: none;
+        text-shadow: 2px 2px 2px #777;
+      }
 
-        /* :hover 마우스 오버상태 */
-        h2 a:hover{
-            color: red;
-            text-decoration: overline;
+      /* :hover 마우스 오버상태 */
+      h2 a:hover {
+        color: red;
+        text-decoration: overline;
+      }
 
-        }
-       
-
-        /* :active 마우스로 눌려진상태(클!) */
-        /* h2 a:active{
+      /* :active 마우스로 눌려진상태(클!) */
+      /* h2 a:active{
             color: hotpink;
             text-decoration: none;
             text-shadow: 2px 2px 2px #777;
         } */
 
-        /* :visited 링크 방문후(한번클릭후) */
-        /* h2 a:visited {
+      /* :visited 링크 방문후(한번클릭후) */
+      /* h2 a:visited {
             color: blue;
         } */
-        
 
-        /* :focus 요소를 클릭하여 초점이 올때 */
-        
-        
+      /* :focus 요소를 클릭하여 초점이 올때 */
+      h2 a:focus {
+        outline: 10px dotted orangered;
+        /* outline: 두종색; */
+      }
 
-        /* 시인이름 */
-        h3 {
-            width: 800px;
-            margin: 0 auto;
-            /* 마영오! - 블록가로중앙! */
-            text-align: right;
-            padding-right: 50px;
-        }
+      /* 시인이름 */
+      h3 {
+        width: 800px;
+        margin: 0 auto;
+        /* 마영오! - 블록가로중앙! */
+        text-align: right;
+        padding-right: 50px;
+      }
 
-        /* 첫번째 파트 */
-        /* 
+      /* 첫번째 파트 */
+      /* 
         요소명.클래스명 -> 종속선택자
             -> 종속선택자를 언제 쓰는가?
             1) 같은 클래스명인데 요소별로 다른 셋팅을 할때
             2) 클래스나 아이디의 요소명을 밝히고 싶을때
         */
-        ul.part1 {
-            /* ul기본 3가지 없애기 */
-            margin: 0;
-            padding: 20px 0;
-            /* 위아래 패딩만줌 */
-            list-style: none;
-            /* 블릿없앰 */
+      ul.part1 {
+        /* ul기본 3가지 없애기 */
+        margin: 0;
+        padding: 20px 0;
+        /* 위아래 패딩만줌 */
+        list-style: none;
+        /* 블릿없앰 */
 
-            width: 800px;
-            margin: 0 auto;
-            /* 마영오! */
-            margin-top: 20px;
-            border: 2px solid #ccc;
-            /* 보더 */
-            border-radius: 20px;
-            text-align: center;
-        }
+        width: 800px;
+        margin: 0 auto;
+        /* 마영오! */
+        margin-top: 20px;
+        border: 2px solid #ccc;
+        /* 보더 */
+        border-radius: 20px;
+        text-align: center;
+      }
 
-        /* 1번 li */
+      /* 1번 li */
+      .part1 li:first-child {
+        font-size: 40px;
+        font-family: "궁서";
+        color: red;
+      }
+      /* 오버시(:hover) */
+      .part1 li:first-child:hover {
+        font-size: 50px;
+        color: blueviolet;
+      }
 
-        /* 오버시(:hover) */  
-        
+      /* 2번째 li */
+      .part1 li:nth-child(2) {
+        font-size: 30px;
+        font-family: "굴림";
+        color: lightcoral;
+        font-weight: bold;
+      }
 
-        /* 2번째 li */
-        
-       
-        /* 오버시 */
-        
-        
-        /* 3번째 li */
-        
-        /* 오버시 */
-        
+      /* 오버시 */
+      .part1 li:nth-child(2):hover {
+        color: skyblue;
+      }
 
-        /* 4번째 li */
+      /* 3번째 li */
+      .part1 li:nth-child(3) {
+        font-size: 24px;
+        font-family: "돋움";
+        color: brown;
+        font-weight: bold;
+        font-style: italic;
+      }
+      /* 오버시 */
+      .part1 li:nth-child(3):hover {
+        font-style: normal;
+      }
 
-        /* 처음에 한글(b태그)숨기기 */
+      /* 4번째 li */
+      .part1 li:nth-child(4) {
+        font-size: 50px;
+        font-family: "궁서";
+        color: dodgerblue;
+      }
+      /* 처음에 한글(b태그)숨기기 */
+      .part1 li:nth-child(4) b {
+        display: none;
+      }
+      /* 오버시 한글(b태그)보이고 */
+      .part1 li:nth-child(4):hover b {
+        display: inline; /* 원래 display로 */
+      }
+      /* 오바시 한자(span태그)숨기기 */
+      .part1 li:nth-child(4):hover span {
+        display: none; /* 숨기기 */
+      }
+      /* 오버시 li에 노란배경색 */
+      .part1 li:nth-child(4):hover {
+        background-color: yellow;
+      }
 
-        /* 오버시 한글(b태그)보이고 한자(span태그)숨기기 */
+      /* 4번 이후 모든 li 전부셋팅 */
+      /* 틸드(~)를 사용한 다중형제 요소 선택 */
+      .part1 li:nth-child(4) ~ li {
+        font-size: 25px;
+        font-family: "궁서";
+        color: orangered;
+      }
+      /* 오버시 */
+      .part1 li:nth-child(4) ~ li:hover {
+        font-size: 28px;
+        color: blue;
+      }
 
-        /* 오버시 li에 노란배경색 */
+      /* 마지막 li */
 
-
-        /* 4번 이후 모든 li 전부셋팅 */
-        /* 틸드(~)를 사용한 다중형제 요소 선택 */
-
-        /* 오버시 */
-        
-
-        /* 마지막 li */
-       
-        /* 
+      /* 
             틸드(~)를 사용한 CSS가 한단계 더 선택하여서
             우선 순위가 높으므로 이것보다 우선순위를 
             높이는 가장쉬운 방법은 한단계위의 부모요소를
@@ -193,37 +232,31 @@
             -> 여기서 한단계 위의 부모는 body!
             (호가호위! 여우 뒤에 호랑이!)
         */
-       
 
-        /* 두번째 파트 */
-        div.part2{
-            width: 800px;
-            margin: 0 auto;
-            /* 마영오! 가로중앙 */
-            margin-top: 20px;
-            /* 마진상단 */
-            border: 2px solid #ccc;
-            border-radius: 20px;
-            /* 둥근모서리 */
-            padding: 20px 0;
-            text-align: center;
-            /* 텍스트 중앙 */
-        }
+      /* 두번째 파트 */
+      div.part2 {
+        width: 800px;
+        margin: 0 auto;
+        /* 마영오! 가로중앙 */
+        margin-top: 20px;
+        /* 마진상단 */
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        /* 둥근모서리 */
+        padding: 20px 0;
+        text-align: center;
+        /* 텍스트 중앙 */
+      }
 
-        /* 두번째 div */
-        
+      /* 두번째 div */
 
-        /* 첫번째 i */
-        
-       
+      /* 첫번째 i */
 
-        /* 3번째 div 이후 div형제요소 모두 */
-        /* .part2 div:nth-of-type(3)~i{ 이후의 i태그만 */
-        /* .part2 div:nth-of-type(3)~*{ 이후의 모든 태그들 */
-       
+      /* 3번째 div 이후 div형제요소 모두 */
+      /* .part2 div:nth-of-type(3)~i{ 이후의 i태그만 */
+      /* .part2 div:nth-of-type(3)~*{ 이후의 모든 태그들 */
 
-
-        /* 
+      /* 
         [ CSS 선택자 우선순위 ]
 
         - 기본적으로 같은 선택자일 경우 아래쪽에 코딩한
@@ -265,48 +298,45 @@
         발생한다! 따라서 사용을 최대한 신중하게 해야함
       */
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>004.가상클래스</h1>
 
     <h2>
-        <a href="#">진달래꽃</a>
+      <a href="#">진달래꽃</a>
     </h2>
 
     <h3>김소월</h3>
 
     <ul class="part1">
-        <li>나 보기가 역겨워</li>
-        <li>가실 때에는</li>
-        <li>말없이 고이 보내 드리우리다</li>
-        <li><b>영변</b><span>寧邊</span>에 <b>약산</b><span>藥山</span></li>
-        <li>진달래꽃</li>
-        <li>아름 따다 가실 길에 뿌리우리다</li>
-        <li>가시는 걸음 걸음</li>
-        <li>놓인 그 꽃을</li>
-        <li>사뿐히 즈려밟고 가시옵소서</li>
-        <li>나 보기가 역겨워</li>
-        <li>가실 때에는</li>
-        <li>죽어도 아니 눈물 흘리우리다</li>
+      <li>나 보기가 역겨워</li>
+      <li>가실 때에는</li>
+      <li>말없이 고이 보내 드리우리다</li>
+      <li><b>영변</b><span>寧邊</span>에 <b>약산</b><span>藥山</span></li>
+      <li>진달래꽃</li>
+      <li>아름 따다 가실 길에 뿌리우리다</li>
+      <li>가시는 걸음 걸음</li>
+      <li>놓인 그 꽃을</li>
+      <li>사뿐히 즈려밟고 가시옵소서</li>
+      <li>나 보기가 역겨워</li>
+      <li>가실 때에는</li>
+      <li>죽어도 아니 눈물 흘리우리다</li>
     </ul>
 
     <div class="part2">
-        <div>나 보기가 역겨워</div>
-        <em>가실 때에는</em>
-        <div>말없이 고이 보내 드리우리다</div>
-        <em>영변에 약산</em>
-        <div>진달래꽃</div>
-        <i>아름 따다 가실 길에 뿌리우리다</i>
-        <div>가시는 걸음 걸음</div>
-        <i>놓인 그 꽃을</i>
-        <div>사뿐히 즈려밟고 가시옵소서</div>
-        <i>나 보기가 역겨워</i>
-        <div>가실 때에는</div>
-        <span>죽어도 아니 눈물 흘리우리다</span>
+      <div>나 보기가 역겨워</div>
+      <em>가실 때에는</em>
+      <div>말없이 고이 보내 드리우리다</div>
+      <em>영변에 약산</em>
+      <div>진달래꽃</div>
+      <i>아름 따다 가실 길에 뿌리우리다</i>
+      <div>가시는 걸음 걸음</div>
+      <i>놓인 그 꽃을</i>
+      <div>사뿐히 즈려밟고 가시옵소서</div>
+      <i>나 보기가 역겨워</i>
+      <div>가실 때에는</div>
+      <span>죽어도 아니 눈물 흘리우리다</span>
     </div>
-
-
-</body>
-
+  </body>
 </html>
