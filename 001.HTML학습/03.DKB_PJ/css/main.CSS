@@ -11,7 +11,19 @@
  */
 
 /* 기본태그 초기화 - 마진,패딩 없애기 */
-html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, dt, dd {
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dt,
+dd {
   margin: 0;
   padding: 0;
 }
@@ -27,7 +39,8 @@ h6 {
     기본글자크기는 16px */
 }
 /* ul, ol초기화 */
-ul,ol{
+ul,
+ol {
   list-style: none;
   /* 블릿 표시자 없앰 */
 }
@@ -50,8 +63,7 @@ body {
   /* background: 색상 이미지 반복여부 고정 위치/크기 */
   /* background: 색이반고윙/크 */
 
-  background:
-    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
+  background: url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
     url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
   /* 로고가 위에 와야해서 먼저 배경셋팅함! */
 
@@ -113,16 +125,16 @@ body {
 
 /* 스크롤바 디자인 클래스 */
 /* -webkit- 벤더사명(크롬,사파리) 접두어 */
-.scbar::-webkit-scrollbar{
+.scbar::-webkit-scrollbar {
   /* 전체 스크롤바 크기변경 */
   width: 7px;
 }
-.scbar::-webkit-scrollbar-thumb{
+.scbar::-webkit-scrollbar-thumb {
   /* 스크롤바 */
   background-color: #666;
   border-radius: 5px;
 }
-.scbar::-webkit-scrollbar-track{
+.scbar::-webkit-scrollbar-track {
   /* 스크롤바 트랙 */
   background-color: #ddd;
   border-radius: 5px;
@@ -140,48 +152,49 @@ body {
 }
 
 /********** 1. 상단영역 **********/
-#top{ /* 겉박스 */
-   background-color: #fff;
+#top {
+  /* 겉박스 */
+  background-color: #fff;
 }
-.top { /* 속박스 */
+.top {
+  /* 속박스 */
   height: 125px;
 }
 /* 로고박스 */
-#logo{
+#logo {
   padding: 20px;
   text-align: center;
 }
 /* 로고이미지 */
-#logo img{
+#logo img {
   width: 100px;
 }
 
 /* GNB메뉴 */
-.gnb{
+.gnb {
   width: 569px;
   margin: 0 auto;
   /* 마영오! */
 }
 
 /* 가상요소로 clear 설정하기 */
-.gnb>ul>::after{
-  content:'';
+.gnb > ul > ::after {
+  content: "";
   display: block;
   clear: both;
 }
-.gnb>ul>li{
+.gnb > ul > li {
   float: left; /* 옆으로 흐르게 */
   padding: 0 15px;
 }
 /* 메뉴 링크 */
-.gnb>ul>li>a{
+.gnb > ul > li > a {
   color: #222;
   text-decoration: none;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 17px;
   line-height: 40px;
 }
-
 
 /********** 2. 메인영역 **********/
 .cont {
@@ -205,15 +218,14 @@ body {
   /* float해제를 위해!
   -> 자식요소가 위로 올라갈때 가려져서 쓸 수 없음!*/
   /* -> 가상요소로 마지막에 float해제 설정하기! */
- 
 }
 /* 가상요소로 clear설정하기! */
-#cbx::after{
-  content:'';
+#cbx::after {
+  content: "";
   display: block;
   /* div와 비슷 */
-  clear:both;
-   /* float을 끊어서 부모가 자식을 인식함! */
+  clear: both;
+  /* float을 끊어서 부모가 자식을 인식함! */
 }
 /* 캐릭터박스 공통 */
 .cat {
@@ -245,12 +257,12 @@ body {
   /* 손가락모양 */
 }
 /* 캐릭터 이미지 박스 */
-.ci{
+.ci {
   /* 트랜지션: 속시이지 */
-  transition: margin-top .4s ease-out; 
+  transition: margin-top 0.4s ease-out;
 }
 /* .cat에 마우스 오버시 .ci의 마진탑을 마이너스로 설정! */
-.cat:hover .ci{
+.cat:hover .ci {
   margin-top: -57%;
 }
 /* 캐릭터 이미지 */
@@ -313,9 +325,9 @@ body {
   /* 둥근모서리 - border-radius */
   border-radius: 20px 0 20px;
   /* 4개의 값- 왼쪽 위 부터 시계방향 */
-  
+
   /* 트랜지션: 속시이지 - trs */
-  transition: height .4s ease-out;
+  transition: height 0.4s ease-out;
   /* transition: height .4s; -> 시간만 줘도 적용됨 
   옵션이 모든 속성과 가속도는 기본 ease적용*/
 }
@@ -336,7 +348,7 @@ body {
   4. 지연 - 지연시간 즉, 처음에 대기시간(초단위:s)
   5. 적용법: 오버시와 원상복귀되는 애니가 같다면 오전전 원본에 한번만 주면 양방향 동일하게 적용됨
              만약 오버시와 아웃시 따로 주려면 각각 설정해야함!     
-****************************************************************************************************/ 
+****************************************************************************************************/
 /* .cat에 오버시 높이값 변경! */
 .cat:hover .cd {
   height: 250px;
@@ -351,7 +363,7 @@ body {
 }
 /* 가상요소로 타이틀 앞에 작은 도깨비로고 넣기 */
 .cd h3::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 15px;
   height: 30px;
@@ -370,44 +382,46 @@ body {
   /* 양쪽정렬 */
 }
 /* 캐릭터 설명 첫번째 글자 가상요소로 변경하기! */
-.cd p:first-of-type::first-letter{
+.cd p:first-of-type::first-letter {
   font-size: 30px;
   color: cyan;
   text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000;
   /* 4개의 그림자로 글자 테두리 주기! */
 }
 /********** 3. 하단영역 **********/
-#info{/* 겉박스 */
+#info {
+  /* 겉박스 */
   background-color: rgba(255, 255, 255, 0.7);
 }
-.info{/* 속박스 */
+.info {
+  /* 속박스 */
   height: 241px;
   padding: 15px;
   box-sizing: border-box;
   /* 크기유지 - 보더,패딩포함 */
 }
 /* 하단링크 */
-.blink{
+.blink {
   width: 804px;
   margin: 0 auto;
   /* 마영오! */
 }
 /* 가상요소 clear */
-.blink ul::after{
-  content: '';
+.blink ul::after {
+  content: "";
   display: block;
   clear: both;
 }
-.blink li{
+.blink li {
   float: left;
   padding: 0 15px;
 }
 /* 하단링크 a */
-.blink a{
+.blink a {
   color: #222;
   text-decoration: none;
   /* font-family: 'Nanum Gothic', sans-serif; */
-  font: bold 14px/39px 'Nanum Gothic', sans-serif;
+  font: bold 14px/39px "Nanum Gothic", sans-serif;
   /* 
       font 한번에 셋팅하기!
       font: 스두크/줄체
@@ -415,17 +429,17 @@ body {
   */
 }
 /* 마우스 오버시 a요소 */
-.blink a:hover{
+.blink a:hover {
   color: red;
   text-decoration: underline;
 }
 
 /* 회사주소박스 */
-.addr{
+.addr {
   width: 804px;
   margin: 10px auto;
   border: 4px double #222;
-  font: 14px/2 'Nanum Gothic', sans-serif;
+  font: 14px/2 "Nanum Gothic", sans-serif;
   /* 원래 address요소는 italic체인데 font한번에쓰기에서
   스타일 설정을 안하면 기본 normal이 적용되서 없어짐 */
   text-align: center;
@@ -434,6 +448,6 @@ body {
   /* 크기유지 */
 }
 /* 하단로고 */
-.blogo{
+.blogo {
   text-align: center;
 }
